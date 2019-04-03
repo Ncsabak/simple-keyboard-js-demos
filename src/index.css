@@ -1,3 +1,8 @@
+@font-face {
+  font-family: typewriter;
+  src: url("/src/typewriter.ttf");
+}
+
 input {
   width: 100%;
   height: 100px;
@@ -5,6 +10,7 @@ input {
   font-size: 20px;
   border: none;
   box-sizing: border-box;
+  font-family: typewriter;
 }
 
 .simple-keyboard {
@@ -15,10 +21,16 @@ input {
   Theme: myTheme2
 */
 .simple-keyboard.myTheme2 {
-  padding: 0;
-  border-radius: 5px;
+  transition: all 0.1s ease;
+  font-family: typewriter;
+  padding: 5;
+  background-color: #454545;
+  border-radius: 4px;
   margin: 10px;
   width: calc(100% - 20px);
+  -webkit-box-shadow: 5px 8px 0px #2b2824, 3px 5px 15px rgba(87, 86, 86, 0.4);
+  -moz-box-shadow: 5px 8px 0px #2b2824, 3px 5px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 8px 0px #2b2824, 3px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .simple-keyboard.myTheme2 .hg-row {
@@ -29,70 +41,80 @@ input {
   margin-bottom: 0;
 }
 
-.simple-keyboard.myTheme2 .hg-row .hg-button {
-  background: #9cbffb;
-  color: white;
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  padding: 15px;
+.simple-keyboard.myTheme2 .hg-button {
+  background: url("/src/KeyBack.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 3px 6px 0px #2b2824, 2px 1px 15px rgba(0, 0, 0, 0.4),
+    -3px 6px 0px #574b37, -2px 0px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 3px 6px 0px #2b2824, 2px 1px 15px rgba(0, 0, 0, 0.4),
+    -3px 6px 0px #574b37, -2px 0px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 6px 0px #2b2824, 2px 1px 15px rgba(0, 0, 0, 0.4),
+    -3px 6px 0px #574b37, -2px 0px 15px rgba(0, 0, 0, 0.4);
+  color: black;
+  font-weight: bold;
+  margin: 10px 14px;
+  border-radius: 14px 14px 24px 24px;
+  border: black;
+  padding-top: 13px;
   box-sizing: border-box;
   height: 50px;
+  width: 25px;
+  font-size: 18px;
   text-align: center;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button.bottomButtonTheme {
+  width: 60%;
+  padding: 0px;
+  border-radius: 4px 4px 14px 14px;
+  background: url("../src/space.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .simple-keyboard.myTheme2 .hg-row .hg-button:not(:last-child) {
   margin-right: 0;
 }
 
-.simple-keyboard.myTheme2 .hg-row .hg-button span {
-  transition: all 0.3s ease-in-out;
-}
+/* .simple-keyboard.myTheme2 .hg-row .hg-button span {
+  transition: all 0.1s ease-in-out;
+} */
 
-.simple-keyboard.myTheme2 .hg-row .hg-button:not(:active) {
+/* .simple-keyboard.myTheme2 .hg-row .hg-button:not(:active) {
   animation: myTheme2Anim 2s infinite alternate;
-}
+} */
 
 .simple-keyboard.myTheme2 .hg-row .hg-button.myTheme2b {
   animation: none;
-  background: rgba(255, 60, 60, 0.86);
-  color: white;
+  font-family: typewriter;
+  font-size: 12px;
+  background: url("../src/KeyBack.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.simple-keyboard.myTheme2 .hg-row .hg-button.capsLockTheme {
+  padding-top: 8px;
 }
 
 .simple-keyboard.myTheme2 .hg-row .hg-button:active {
-  color: white;
-  background: rgba(0, 0, 0, 0.8);
+  /* color: white;
+  background: rgba(0, 0, 0, 0.8); */
+  font-size: 15px;
+
+  transition: all 0.1s ease;
+  /* margin: 15px 10px 15px 19px; */
+  background-color: #454545;
+  background-size: 90% 90%;
+  background-position: center;
 }
 
-.simple-keyboard.myTheme2 .hg-row:nth-child(1) .hg-button {
-  animation-delay: 0.5s;
-}
-.simple-keyboard.myTheme2 .hg-row:nth-child(2) .hg-button {
-  animation-delay: 1s;
-}
-.simple-keyboard.myTheme2 .hg-row:nth-child(3) .hg-button {
-  animation-delay: 1.5s;
-}
-.simple-keyboard.myTheme2 .hg-row:nth-child(4) .hg-button {
-  animation-delay: 2s;
-}
-.simple-keyboard.myTheme2 .hg-row:nth-child(5) .hg-button {
-  animation-delay: 2.5s;
-}
-
-.simple-keyboard.myTheme2 .hg-button:hover span {
+/* .simple-keyboard.myTheme2 .hg-button:hover span {
   transform: scale(2);
   width: 100%;
   display: inline-block;
   height: 100%;
   text-align: center;
-}
-
-@keyframes myTheme2Anim {
-  from {
-    background: #9cbffb;
-  }
-  to {
-    background: #4c7dd0;
-  }
-}
+} */

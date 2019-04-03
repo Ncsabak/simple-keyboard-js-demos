@@ -7,16 +7,40 @@ let keyboard = new Keyboard({
   buttonTheme: [
     {
       class: "myTheme2b",
-      buttons: "{bksp}"
+      buttons: "{bksp} {shift} {enter} {tab} {lock}"
+    },
+    {
+      class: "bottomButtonTheme",
+      buttons: "{space}"
+    },
+    {
+      class: "capsLockTheme",
+      buttons: "{lock}"
     }
   ],
   display: {
-    "{enter}": "submit",
-    "{bksp}": "delete",
-    "{lock}": "lock",
-    "{shift}": "shift",
-    "{tab}": "tab",
+    "{enter}": "Enter",
+    "{bksp}": "Back",
+    "{lock}": "Caps Lock",
+    "{shift}": "Shift",
+    "{tab}": "Tab",
     "{space}": " "
+  },
+  layout: {
+    default: [
+      "0 1 2 3 4 5 6 7 8 9 ö ü ó {bksp}",
+      "q w e r t z u i o p ő ú",
+      "{lock} a s d f g h j k l é á ű {enter}",
+      "í y x c v b n m , . -",
+      ".hu {space} @"
+    ],
+    shift: [
+      "0 1 2 3 4 5 6 7 8 9 Ö Ü Ó {bksp}",
+      "Q W E R T Z U I O P Ő Ú",
+      "{lock} A S D F G H J K L É Á Ű {enter}",
+      "Í Y X C V B N M ? : _",
+      ".hu {space} @"
+    ]
   }
 });
 
